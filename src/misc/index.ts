@@ -38,3 +38,6 @@ export async function sleep (ms: number): Promise<void> {
     setTimeout(resolve, ms)
   })
 }
+
+export const clampValue = (value: number, min: number, max: number): number =>
+  Math.min(Math.max(value, min), max);
